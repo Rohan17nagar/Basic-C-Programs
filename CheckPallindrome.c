@@ -1,17 +1,24 @@
 /******************************************************************************
-* Pallindrome number or not..
+ * Check Pallindrome or not..
 *******************************************************************************/
 #include <stdio.h>
+
 int main()
-{   
-    int num;
-    int temp,count=0;
+{
+    int num,rev=0,rem,temp;
+    printf("Enter the number:\n");
     scanf("%d",&num);
     temp = num;
     while(temp!=0){
+        rem = temp%10;
+        rev = rev*10 + rem;
         temp = temp/10;
-        count++;
     }
-    for(i=0;i<)
+    if(rev== num){
+        printf("Pallindrome..");
+    }
+    else{
+        printf("Not Pallindrome");
+    }
     return 0;
 }
